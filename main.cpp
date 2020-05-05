@@ -1,10 +1,11 @@
-#include <iostream>
-using namespace std;
-
 #define CATCH_CONFIG_MAIN
+#include <iostream>
+#include <string>
 #include "catch.hpp"
 #include "line.h"
 #include "point.h"
+
+using namespace std;
 
 TEST_CASE("Test point()")
 {
