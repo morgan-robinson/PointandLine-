@@ -38,3 +38,18 @@ string Line::toString()
 	retVal << "Point 1: [" << getP1().toString() << "], Point 2: [" << getP2().toString() << "]";
 	return retVal.str();
 }
+
+double Line::calculateLength()
+{
+    double length;
+    double eq1;
+    double eq2;
+    
+    eq1 = pow(getP2().getX() - getP1().getX(), 2);
+    eq2 = pow(getP2().getY() - getP1().getY(),2);
+    
+    length = sqrt(eq1 + eq2);
+    
+    return length;
+    
+}

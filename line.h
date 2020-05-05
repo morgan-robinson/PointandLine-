@@ -16,4 +16,5 @@ public:
 	Point getP2();
 	void setP2(Point p);
 	string toString();
+    double calculateLength();
 };

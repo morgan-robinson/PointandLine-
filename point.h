@@ -8,6 +8,7 @@ class Point {
     double x;
     double y;
     
+    Point();
     Point(double x, double y);
     double getX();
     void setDoubleX(double temp);

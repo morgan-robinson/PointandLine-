@@ -7,21 +7,8 @@
 
 
 
-int main() {
-    
-    //Tests
-    
-    //Tests
-    return 0;
 
 using namespace std;
-
-int main()
-{
-    Catch::Session().run();
-
-    return 0;
-}
 
 
 TEST_CASE("Test point()")
@@ -51,5 +38,6 @@ TEST_CASE("Test line()")
         Line line1(one, two);
 
         REQUIRE(line1.toString() == "Point 1: [X: 2.5, Y: 1.3], Point 2: [X: 5.3, Y: 7.5]");
+        REQUIRE((abs(line1.calculateLength() - 6.8) < 0.01)== true);
     }
 }

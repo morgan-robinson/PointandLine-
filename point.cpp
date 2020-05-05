@@ -6,6 +6,11 @@
 
 using namespace std;
 
+Point::Point(){
+    setDoubleX(0.0);
+    setDoubleY(0.0);
+}
+
 Point::Point(double point1, double point2) {
     setDoubleX(point1);
     setDoubleY(point2);
