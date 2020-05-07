@@ -19,5 +19,7 @@ public:
     double calculateLength();
     double getSlope();
     bool onLine(Point point);
-    bool isParallell(Line line2);
+    bool isParallel(Line line2);
+	bool isIntersecting(Line line2);
 };
+

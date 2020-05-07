@@ -71,24 +71,38 @@ double Line::getSlope()
 
 bool Line::onLine(Point point)
 {
+	bool retval = false;
     //y = mx + b
     double b = point.getY() - (getSlope() * point.getX());
     
     if(point.getY() == (getSlope() * point.getX()) + b)
     {
-        return true;
+        retval = true;
     }
-    return false;
+    return retval;
 }
 
-bool Line::isParallell(Line line2)
+bool Line::isParallel(Line line2)
 {
+	bool retval = false;
+
     if(getSlope() == line2.getSlope())
     {
-        return true;
+        retval = true;
     }
     
-    return false;
+    return retval;
 }
 
+bool Line::isIntersecting(Line line2)
+{
+	bool retval = false;
+
+	if (getSlope() != line2.getSlope())
+	{
+		retval = true;
+	}
+
+	return retval;
+}
 

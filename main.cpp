@@ -11,6 +11,10 @@
 using namespace std;
 
 
+int main() {
+    
+    return 0;
+
 TEST_CASE("Test point()")
 {
     SECTION("first test")
@@ -44,7 +48,8 @@ TEST_CASE("Test line()")
         REQUIRE(line1.toString() == "Point 1: [X: 2.5, Y: 1.3], Point 2: [X: 5.3, Y: 7.5]");
         REQUIRE((abs(line1.calculateLength() - 6.8) < 0.01)== true);
         REQUIRE(line2.onLine(five) == true);
-        REQUIRE(line1.isParallell(line2)== false);
+        REQUIRE(line1.isParallel(line2)== false);
+		REQUIRE(line1.isIntersecting(line2) == true);
 
     }
 }
