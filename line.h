@@ -17,4 +17,7 @@ public:
 	void setP2(Point p);
 	string toString();
     double calculateLength();
+    double getSlope();
+    bool onLine(Point point);
+    bool isParallell(Line line2);
 };

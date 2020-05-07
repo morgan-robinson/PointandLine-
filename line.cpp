@@ -53,3 +53,42 @@ double Line::calculateLength()
     return length;
     
 }
+
+double Line::getSlope()
+{
+    double slope = 0;
+    double eq1;
+    double eq2;
+    
+    eq1 = getP2().getY() - getP1().getY();
+    eq2 = getP2().getX() - getP1().getX();
+    
+    slope = eq1 / eq2;
+    
+    return slope;
+    
+}
+
+bool Line::onLine(Point point)
+{
+    //y = mx + b
+    double b = point.getY() - (getSlope() * point.getX());
+    
+    if(point.getY() == (getSlope() * point.getX()) + b)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool Line::isParallell(Line line2)
+{
+    if(getSlope() == line2.getSlope())
+    {
+        return true;
+    }
+    
+    return false;
+}
+
+

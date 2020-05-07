@@ -36,8 +36,15 @@ TEST_CASE("Test line()")
         Point one(2.5, 1.3);
         Point two(5.3, 7.5);
         Line line1(one, two);
+        Point three(1.0, 1.0);
+        Point four(5.0, 5.0);
+        Line line2(three,four);
+        Point five(3.0,3.0);
 
         REQUIRE(line1.toString() == "Point 1: [X: 2.5, Y: 1.3], Point 2: [X: 5.3, Y: 7.5]");
         REQUIRE((abs(line1.calculateLength() - 6.8) < 0.01)== true);
+        REQUIRE(line2.onLine(five) == true);
+        REQUIRE(line1.isParallell(line2)== false);
+
     }
 }
